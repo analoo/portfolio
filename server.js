@@ -18,8 +18,7 @@ app.set("view engine", "handlebars");
 
 
 app.get("/", function(req,res){
-    var html = "<h1>Welcome to my page</h1>"
-    res.render("index", {data: html})
+    res.render("index")
 })
 
 app.listen(PORT, function() {
