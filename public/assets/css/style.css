@@ -1,0 +1,26 @@
+/* .main-nav{
+    position: static;
+    padding: 10px;
+    border-bottom: #ffc800 solid 10px;
+} */
+
+.logo{
+    height: 40px;
+    /* padding-top: 10px;
+    padding-bottom: 10px; */
+}
+
+/* #nav-menu{
+    position: fixed;
+    right: 20px;   
+} */
+
+#main-modal{
+    background-color: #ffc800;
+    width: 80vw;
+    margin: 50px auto 20px auto;
+    text-align: center;
+    vertical-align: middle;
+    line-height: 2;
+}
+
