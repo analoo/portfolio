@@ -5,7 +5,7 @@ module.exports = function (app) {
     app.get("/api/users", (req, res) => {
         db.User.findAll({
         }).then(users => {
-            res.JSON(users)
+            res.json(users)
         }).catch(err => {
             res.send(err);
         });
@@ -17,9 +17,9 @@ module.exports = function (app) {
                 id : req.params.id
             }
         }).then(user => {
-            res.JSON(user);
+            res.json(user);
         }).catch(err => {
-            res.JSON(err)
+            res.json(err)
         });
     });
 
