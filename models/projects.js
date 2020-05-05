@@ -1,0 +1,42 @@
+module.exports = function (sequelize, DataTypes){
+    var Project = sequelize.define("Project",
+    {
+        title: {
+            type: DataTypes.STRING,
+            allowNull: false
+        },
+
+        description: {
+            type: DataTypes.STRING,
+            allowNull: true
+        },
+
+        githubRep: {
+            type: DataTypes.STRING,
+            allowNull: true
+        },
+
+        deployedLink: {
+            type: DataTypes.STRING,
+            allowNull: true
+        },
+
+        associatedImage: {
+            type: DataTypes.STRING,
+            allowNull: true,
+            default: "#"
+        },
+
+        language: {
+            type: DataTypes.STRING,
+            allowNull: true
+        }
+    });
+
+    Project.associate = models => {
+        models.Project.hasMany(models.Tool, {
+        });
+    }
+
+    return Project
+}
