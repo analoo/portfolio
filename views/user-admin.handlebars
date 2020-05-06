@@ -1,44 +1,79 @@
 <script src="/assets/js/user.js"></script>
 
-<h1> Welcome to the User Admin Page</h1>
+<nav class="uk-navbar-container" uk-navbar>
 
-<form>
+    <div class="uk-navbar-left">
+        <ul class="uk-navbar-nav">
+            <li><a href="/"><span><img class="logo" id="nav-logo" src="/assets/icons/logo.png" alt="logo" /></span></a>
+            </li>
+        </ul>
 
-    <form>
-        <fieldset class="uk-fieldset">
+    </div>
 
-            <div class="uk-margin">
-                <label class="uk-form-label">Email</label>
-                <input id="user-email" class="uk-input" type="text" placeholder="name@something.com">
-            </div>
+    <div class="uk-navbar-right">
+        <ul class="uk-navbar-nav">
+            <li><a href="" uk-icon="menu"></a>
+                <div class="uk-navbar-dropdown">
+                    <ul class="uk-nav uk-navbar-dropdown-nav">
+                        <li><a href="/about">About Me</a></li>
+                        <li><a href="/portfolio">Portfolio</a></li>
+                        <li><a href="/resume">Resume</a></li>
+                    </ul>
+                </div>
+            </li>
+        </ul>
 
-            <div class="uk-margin">
-                <label class="uk-form-label">Name</label>
-                <input id="user-name" class="uk-input" type="text" placeholder="Jane S. Smith">
-            </div>
+    </div>
+</nav>
 
-            <div class="uk-margin">
-                <label class="uk-form-label">Phone</label>
-                <input id="user-phone" class="uk-input" type="text" placeholder="(xxx)xxx-xxxx">
-            </div>
 
-            <div class="uk-margin">
-                <label class="uk-form-label">GitHub</label>
-                <input id="user-github" class="uk-input" type="text" placeholder="username">
-            </div>
 
-             <div class="uk-margin">
-                <label class="uk-form-label">LinkedIn URL</label>
-                <input id="user-linkedIn" class="uk-input" type="text" placeholder="linkedIn.com/username">
-            </div>
+<div class="uk-section">
+    <div class="uk-container">
+
+        <div class="uk-child-width-3 uk-text-center uk-position-center" uk-grid>
            
 
-            <div class="uk-margin">
-                <label class="uk-form-label">About Me</label>
-                <textarea id="user-aboutMe" class="uk-textarea" rows="5" placeholder="Add description of your professional background"></textarea>
-            </div>
+            <form>
 
-        </fieldset>
-        <button id="user-submit" class="uk-button uk-button-default">Submit</button>
-    </form>
+                <fieldset class="uk-fieldset">
+                      Welcome to the User Admin Page
 
+                    <div class="uk-margin">
+                        <label class="uk-form-label">Email</label>
+                        <input id="user-email" class="uk-input" type="text" placeholder="name@something.com">
+                    </div>
+
+                    <div class="uk-margin">
+                        <label class="uk-form-label">Name</label>
+                        <input id="user-name" class="uk-input" type="text" placeholder="Jane S. Smith">
+                    </div>
+
+                    <div class="uk-margin">
+                        <label class="uk-form-label">Phone</label>
+                        <input id="user-phone" class="uk-input" type="text" placeholder="(xxx)xxx-xxxx">
+                    </div>
+
+                    <div class="uk-margin">
+                        <label class="uk-form-label">GitHub</label>
+                        <input id="user-github" class="uk-input" type="text" placeholder="username">
+                    </div>
+
+                    <div class="uk-margin">
+                        <label class="uk-form-label">LinkedIn URL</label>
+                        <input id="user-linkedIn" class="uk-input" type="text" placeholder="linkedIn.com/username">
+                    </div>
+
+
+                    <div class="uk-margin">
+                        <label class="uk-form-label">About Me</label>
+                        <textarea id="user-aboutMe" class="uk-textarea" rows="5"
+                            placeholder="Add description of your professional background"></textarea>
+                    </div>
+
+                </fieldset>
+                <button id="user-submit" class="uk-button uk-button-default">Submit</button>
+            </form>
+        </div>
+    </div>
+</div>

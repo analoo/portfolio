@@ -1,0 +1,33 @@
+{{#each projects}}
+
+<div class="uk-child-width-1-2@m uk-card-default" uk-grid>
+    <div>
+        <div class="uk-card uk-card-muted">
+            <div class="uk-card-media-top">
+                <img src="{{associatedImage}}" alt="Project Image">
+            </div>
+            {{!-- <div class="uk-card-body">
+                <h3 class="uk-card-title">Media Top</h3>
+                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt.</p>
+            </div> --}}
+        </div>
+    </div>
+    <div>
+        <div class="uk-card uk-card-muted">
+            <div class="uk-card-body">
+                <h3 class="uk-card-title">{{title}}</h3>
+                <p>{{description}}</p>
+                <a href={{deployedLink}} target="_blank">Link to site </a>
+                <a href={{githubRep}} target="_blank">Link to Github </a>
+                <div class="uk-card-badge uk-label">{{language}}</div>
+
+            </div>
+            {{!-- <div class="uk-card-media-bottom">
+                <img src="images/light.jpg" alt="">
+            </div> --}}
+        </div>
+    </div>
+</div>
+
+
+{{/each}}

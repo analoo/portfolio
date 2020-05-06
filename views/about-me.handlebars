@@ -1,4 +1,4 @@
-<script src="/assets/js/portfolio.js"></script>
+<script src="/assets/js/aboutMe.js"></script>
 
 <nav class="uk-navbar-container" uk-navbar>
 
@@ -26,7 +26,22 @@
     </div>
 </nav>
 
-<div class="uk-section" id= "portfolio-append">
-    <h3>Portfolio</h3>
+<div class="uk-section">
+    <div class="uk-container">
 
+        <h3>{{name}}</h3>
+
+        <div class="uk-grid-match uk-child-width-2-3@m" uk-grid>
+            <div>
+                <p>{{aboutMe}}</p>
+            </div>
+
+        </div>
+        <divclass="uk-grid-match uk-child-width-2-3@m" uk-grid>
+            <p>phone: {{phone}}</p>
+            <a href="https://github.com/{{github}}" target="_blank">github</a>
+            <a href="{{linkedIn}}" target="_blank">linkedIn</a>
+        </div>
+
+    </div>
 </div>
