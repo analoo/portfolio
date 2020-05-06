@@ -6,7 +6,7 @@ module.exports = function (app) {
         db.Project.findAll({
         }).then(project => {           
             var arrOfObjs = project.map(element => ({
-                title: element.dataValues.tile,
+                title: element.dataValues.title,
                 description: element.dataValues.description,
                 githubRep: element.dataValues.githubRep,
                 deployedLink: element.dataValues.deployedLink,
