@@ -44,7 +44,7 @@ module.exports = function (sequelize, DataTypes){
         );
 
         models.User.hasMany(models.Project, 
-            {foreignkey: "id"}, {onDelete: "cascade"}
+            {foreignkey: "projectId"}, {onDelete: "cascade"}
         );
     }
 

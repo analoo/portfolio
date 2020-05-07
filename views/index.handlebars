@@ -1,107 +1,42 @@
-<nav class="uk-navbar-container" uk-navbar>
+<nav class="uk-navbar-container uk-background-default" uk-navbarn uk-sticky="bottom: #offset">
 
     <div class="uk-navbar-left">
         <ul class="uk-navbar-nav">
-            <li><a href="#"><span><img class="logo" id="nav-logo" src="/assets/icons/logo.png" alt="logo" /></span></a>
+
+            <li><a href="/"><span><img class="logo" id="nav-logo" src="/assets/icons/logo.png" alt="logo" /></span></a>
             </li>
         </ul>
 
     </div>
 
-    <div class="uk-navbar-right">
-        <ul class="uk-navbar-nav">
-            <li><a href="" uk-icon="menu"></a>
-                <div class="uk-navbar-dropdown">
-                    <ul class="uk-nav uk-navbar-dropdown-nav">
-                        <li><a href="#">About Me</a></li>
-                        <li><a href="#">Portfolio</a></li>
-                        <li><a href="#">Resume</a></li>
-                    </ul>
-                </div>
-            </li>
-        </ul>
-
-    </div>
 </nav>
 
-<div class="uk-background-fixed uk-background-center-center uk-height-viewport uk-width-1-1"
-    style="background-image: url(assets/icons/background.jpg);">
 
+<div class="uk-background-fixed uk-background-center-center uk-width-1-1" 
+    style="background-image: url(assets/images/background.jpg);">
 
-    {{!-- <div class="uk-card uk-card-default uk-card-body uk-width-large" style="z-index: 980;"
-        uk-sticky="offset: 100; bottom: #top"> --}}
-    <h1 id="intro">
-        Hi, I'm Ana <span id="last-names">Medrano Fernandez</span>
-    </h1>
-    <h2>full stack developer passionate about </h2>
+    <div class="uk-position-relative uk-width-1-1" uk-height-viewport="offset-top: true">
 
-    <ul>
-        <li>people</li>
-        <li>culture</li>
-        <li>learning </li>
-        <li>connecting the dots</li>
-    </ul>
-    {{!-- </div> --}}
+        <div>
+            <div class="uk-card uk-card-default uk-card-large uk-card-body uk-width-1-2 uk-position-center">
+                <h1 class="uk-heading-bullet">
+                    Hi, I'm Ana <span id="last-names">Medrano Fernandez</span>
+                </h1>
+                <h3 class="uk-card-title">A full stack developer passionate about</h3>
+                <p>people</p>
+                <p>culture</p>
+                <p>learning </p>
+                <p>connecting the dots</p>
 
-</div>
-
-<div class="uk-position-relative uk-height-viewport uk-width-1-1">
-
-
-    <div class="uk-position-relative uk-visible-toggle uk-light" tabindex="-1" uk-slider="center: true">
-
-        <ul class="uk-slider-items uk-grid">
-            <li class="uk-width-3-4">
-                <div class="uk-panel uk-text-middle">
-                    <h1>Name of Project</h1>
-                      <div class="uk-position-medium uk-position-cover uk-overlay uk-overlay-default uk-flex uk-flex-center uk-flex-middle">Overlay</div>
-                    <div class="uk-text-center uk-card-body uk-text-secondary">
-                        Description of what the project is about <code>.uk-text-left</code>
-                    </div>
-                    <div class="uk-position-center uk-panel">
-                        <img src="assets/icons/background.jpg" alt="">
-                    </div>
-                </div>
-            </li>
-            <li class="uk-width-3-4">
-                <div class="uk-panel">
-                    <img src="assets/icons/background.jpg" alt="">
-                    <div class="uk-position-center uk-panel">
-                        <h1>2</h1>
-                    </div>
-                </div>
-            </li>
-            <li class="uk-width-3-4">
-                <div class="uk-panel">
-                    <img src="assets/icons/background.jpg" alt="">
-                    <div class="uk-position-center uk-panel">
-                        <h1>3</h1>
-                    </div>
-                </div>
-            </li>
-            <li class="uk-width-3-4">
-                <div class="uk-panel">
-                    <img src="assets/icons/background.jpg" alt="">
-                    <div class="uk-position-center uk-panel">
-                        <h1>4</h1>
-                    </div>
-                </div>
-            </li>
-            <li class="uk-width-3-4">
-                <div class="uk-panel">
-                    <img src="assets/icons/background.jpg" alt="">
-                    <div class="uk-position-center uk-panel">
-                        <h1>5</h1>
-                    </div>
-                </div>
-            </li>
-        </ul>
-
-        <a class="uk-position-center-left uk-position-small uk-hidden-hover" href="#" uk-slidenav-previous
-            uk-slider-item="previous"></a>
-        <a class="uk-position-center-right uk-position-small uk-hidden-hover" href="#" uk-slidenav-next
-            uk-slider-item="next"></a>
-
+                <ul class="uk-dotnav" style="text-align: center;">
+                    <li class="uk-active"><a href="/">Home</a></li>
+                    <li><a href="/about">About Me</a></li>
+                    <li><a href="/portfolio">Portfolio</a></li>
+                    <li><a href="/resume">Resume</a></li>
+                </ul>
+            </div>
+        </div>
     </div>
+
 </div>
 

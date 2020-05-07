@@ -4,32 +4,26 @@ module.exports = function (app) {
 
     app.get("/api/:user/projects", (req, res) => {
         db.Project.findAll({
-        }).then(project => {           
+            include: [
+                { model: db.Tool }]
+        }).then(project => {
             var arrOfObjs = project.map(element => ({
                 title: element.dataValues.title,
                 description: element.dataValues.description,
                 githubRep: element.dataValues.githubRep,
                 deployedLink: element.dataValues.deployedLink,
                 associatedImage: element.dataValues.associatedImage,
-                language: element.dataValues.language
-
+                language: element.dataValues.language,
+                UserId: req.params.user,
+                tools: element.dataValues.Tool
             }));
-           
+
             var renderedApp = {
                 layout: false,
                 projects: arrOfObjs
             }
 
-            // projects = {
-            //     title: project.dataValues.tile,
-            //     description: project.dataValues.description,
-            //     githubRep: project.dataValues.githubRep,
-            //     deployedLink: project.dataValues.deployedLink,
-            //     associatedImage: project.dataValues.associatedImage,
-            //     language: project.dataValues.language,
-            // }
-            res.render("partials/projects/project-block",renderedApp)
-            // res.json(project)
+            res.render("partials/projects/project-block", renderedApp)
         }).catch(err => {
             res.send(err);
         });
@@ -47,15 +41,28 @@ module.exports = function (app) {
         });
     });
 
-    app.post("/api/:userid/project/new", (req, res) => {
-        db.Project.create(req.body, {
-        }).then(result => {
-            console.log(result)
-            res.json(result.dataValues)
-        }).catch(err => {
-            res.json(err)
-        })
+    app.post("/api/project/new", (req, res) => {
+        db.Project.create({
+            title: req.body.title,
+            description: req.body.description,
+            githubRep: req.body.githubRep,
+            deployedLink: req.body.deployedLink,
+            associatedImage: req.body.associatedImage,
+            UserId: req.body.UserId,
+            tools: [
+                req.body.tools]
+        },
+            {
+                include: db.Tools
+            }).then(result => {
+                console.log(result)
+                res.json(result.dataValues)
+            }).catch(err => {
+                res.json(err)
+            })
     })
+
+
 
     app.put("/api/project/:projid", (req, res) => {
         db.Project.update(req.body, {
@@ -80,5 +87,15 @@ module.exports = function (app) {
             res.JSON(err)
         });
     });
+
+    app.post("/api/tools/new", (req, res) => {
+        db.Tool.create(req.body, {
+        }).then(result => {
+            console.log(result)
+            res.json(result.dataValues)
+        }).catch(err => {
+            res.json(err)
+        })
+    })
 
 }

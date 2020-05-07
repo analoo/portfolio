@@ -1,5 +1,5 @@
 $(function(){
-    let userID = 7;
+    let userID = 2;
     $.ajax(`/api/${userID}/projects`, {
         type: "GET"
     }).then(result => {

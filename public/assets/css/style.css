@@ -1,26 +1,81 @@
-/* .main-nav{
-    position: static;
-    padding: 10px;
-    border-bottom: #ffc800 solid 10px;
-} */
-
 .logo{
     height: 40px;
     /* padding-top: 10px;
     padding-bottom: 10px; */
 }
 
-/* #nav-menu{
-    position: fixed;
-    right: 20px;   
-} */
-
-#main-modal{
-    background-color: #ffc800;
-    width: 80vw;
-    margin: 50px auto 20px auto;
+.uk-heading{
+    font-family: 'Raleway Dots', cursive;
     text-align: center;
     vertical-align: middle;
-    line-height: 2;
+    padding: 0;
+    margin: 0
+}
+
+body{
+    background-color: #ffc800;
+}
+
+.uk-heading-bullet{
+    margin: auto;
+    padding: auto;
+}
+
+.uk-navbar-container{
+    background-color: white;
+}
+
+.formatting{
+    margin: auto;
+    padding: auto;
+
+}
+
+.resume-section{
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    background-color: white;
+    width: 90%;
+    padding: 10px;
+    margin: auto;
+    margin-bottom: 10px;
+    box-shadow: 5px 5px lightgray;
+
+}
+
+.resume-heading{
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    font-size: large;
+    text-align: center;
+}
+
+.company{
+    float: left;
+    padding: 0;
+}
+
+.timing{
+    float: right;
+    padding: 0;
+
+}
+.title{
+    display: inline-block;
+    font-weight: bold;
+}
+
+.work-div{
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
+ul{
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    font-size: medium;
+    padding-top: 0;
+}
+
+li{
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    font-size: small;
+    padding-bottom: 2px;
+    line-height: 1.1;
 }
 

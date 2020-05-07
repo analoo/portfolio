@@ -10,7 +10,7 @@ module.exports = function (app) {
         // app.get("/api/users/:id", (req,res) => {
         db.User.findOne({
             where: {
-                id: 1
+                id: 2
             }
         }).then(user => {
             console.log(user.dataValues)
@@ -37,6 +37,10 @@ module.exports = function (app) {
 
     app.get("/projects", function (req, res) {
         res.render("projects-admin")
+    });
+
+    app.get("/tools", function (req, res) {
+        res.render("tools-admin")
     });
 
 }

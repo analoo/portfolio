@@ -4,17 +4,22 @@
 
     <div class="uk-navbar-left">
         <ul class="uk-navbar-nav">
-            <li><a href="/"><span><img class="logo" id="nav-logo" src="/assets/icons/logo.png" alt="logo" /></span></a>
-            </li>
+            {{!-- <li><a href="/"><span><img class="logo" id="nav-logo" src="/assets/icons/logo.png" alt="logo" /></span></a>
+            </li> --}}
+            <li><h1 class="uk-heading">About Me</h1></li>
         </ul>
 
     </div>
+    {{!-- <div> --}}
+       
+    {{!-- </div> --}}
 
     <div class="uk-navbar-right">
         <ul class="uk-navbar-nav">
             <li><a href="" uk-icon="menu"></a>
                 <div class="uk-navbar-dropdown">
                     <ul class="uk-nav uk-navbar-dropdown-nav">
+                         <li><a href="/">Home</a></li>
                         <li><a href="/about">About Me</a></li>
                         <li><a href="/portfolio">Portfolio</a></li>
                         <li><a href="/resume">Resume</a></li>
@@ -26,22 +31,52 @@
     </div>
 </nav>
 
-<div class="uk-section">
-    <div class="uk-container">
+<div class="uk-background-fixed uk-background-center-center uk-width-1-1" 
+    style="background-image: url(assets/images/background.jpg);">
 
-        <h3>{{name}}</h3>
+    <div class="uk-position-relative uk-width-1-1" uk-height-viewport="offset-top: true">
 
-        <div class="uk-grid-match uk-child-width-2-3@m" uk-grid>
-            <div>
-                <p>{{aboutMe}}</p>
+        <div>
+            <div class="uk-card uk-card-default uk-card-large uk-card-body uk-width-1-2 uk-position-center">
+                <div class="uk-container">
+
+            {{!-- <h3>{{name}}</h3> --}}
+
+            <div class="uk-grid-match uk-child-width-2-3@m" uk-grid>
+                <div>
+                    <p>{{aboutMe}}</p>
+                </div>
+
             </div>
-
+            <divclass="uk-grid-match uk-child-width-2-3@m" uk-grid>
+                <p>phone: {{phone}}</p>
+                <a href="https://github.com/{{github}}" target="_blank">github</a>
+                <a href="{{linkedIn}}" target="_blank">linkedIn</a>
         </div>
-        <divclass="uk-grid-match uk-child-width-2-3@m" uk-grid>
-            <p>phone: {{phone}}</p>
-            <a href="https://github.com/{{github}}" target="_blank">github</a>
-            <a href="{{linkedIn}}" target="_blank">linkedIn</a>
+            </div>
+        </div>
+    </div>
+
+</div>
+
+{{!-- <div class="formatting">
+    <h1 class="uk-heading-bullet">About Me</h1>
+    <div class="uk-section">
+        <div class="uk-container">
+
+            <h3>{{name}}</h3>
+
+            <div class="uk-grid-match uk-child-width-2-3@m" uk-grid>
+                <div>
+                    <p>{{aboutMe}}</p>
+                </div>
+
+            </div>
+            <divclass="uk-grid-match uk-child-width-2-3@m" uk-grid>
+                <p>phone: {{phone}}</p>
+                <a href="https://github.com/{{github}}" target="_blank">github</a>
+                <a href="{{linkedIn}}" target="_blank">linkedIn</a>
         </div>
 
     </div>
-</div>
+</div> --}}

@@ -1,0 +1,58 @@
+<script src="/assets/js/project.js"></script>
+
+<nav class="uk-navbar-container" uk-navbar>
+
+    <div class="uk-navbar-left">
+        <ul class="uk-navbar-nav">
+            <li><a href="/"><span><img class="logo" id="nav-logo" src="/assets/icons/logo.png" alt="logo" /></span></a>
+            </li>
+        </ul>
+
+    </div>
+
+    <div class="uk-navbar-right">
+        <ul class="uk-navbar-nav">
+            <li><a href="" uk-icon="menu"></a>
+                <div class="uk-navbar-dropdown">
+                    <ul class="uk-nav uk-navbar-dropdown-nav">
+                        <li><a href="/about">About Me</a></li>
+                        <li><a href="/portfolio">Portfolio</a></li>
+                        <li><a href="/resume">Resume</a></li>
+                    </ul>
+                </div>
+            </li>
+        </ul>
+
+    </div>
+</nav>
+
+
+
+<div class="uk-section">
+    <div class="uk-container">
+
+        <div class="uk-child-width-3 uk-text-center uk-position-center" uk-grid>
+           
+
+            <form>
+
+                <fieldset class="uk-fieldset">
+                      Welcome to the Tools Administration Page
+
+                    <div class="uk-margin">
+                        <label class="uk-form-label">Tool Type</label>
+                        <input id="tool-type" class="uk-input" type="text" placeholder="Javascript">
+                    </div>
+
+                     <div class="uk-margin">
+                        <label class="uk-form-label">Description</label>
+                        <input id="tool-useCase" class="uk-input" type="text" placeholder="To build out functionality">
+                    </div>
+                   
+
+                </fieldset>
+                <button id="tool-submit" class="uk-button uk-button-default">Submit</button>
+            </form>
+        </div>
+    </div>
+</div>

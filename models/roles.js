@@ -18,8 +18,8 @@ module.exports = function (sequelize, DataTypes){
     });
 
     Role.associate = models => {
-        // models.Role.hasOne(models.Company, {
-        // });
+        models.Role.belongsTo(models.Company, {
+        });
 
         models.Role.hasMany(models.Experience, {
 
