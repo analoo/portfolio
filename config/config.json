@@ -17,10 +17,10 @@
     },
 
     "production": {
-        "username": "root",
-        "password": null,
-        "database": "database_production",
-        "host": "127.0.0.1",
+        "username": "drgpuk44k5hv11mg",
+        "password": "czl0pqw54afbfn7n",
+        "database": "ahlnujmflv5dz5dq",
+        "host": "ijj1btjwrd3b7932.cbetxkdyhwsb.us-east-1.rds.amazonaws.com",
         "dialect": "mysql",
         "operatorsAliases": false
       }
