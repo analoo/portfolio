@@ -34,7 +34,7 @@ module.exports = function (sequelize, DataTypes){
     });
 
     Project.associate = models => {
-        models.Project.belongsToMany(models.Tool, { through: 'ProjectTool'});
+        models.Project.hasMany(models.ProjectTool, { onDelete: "cascade"});
         models.Project.belongsTo(models.User, {
         });
 

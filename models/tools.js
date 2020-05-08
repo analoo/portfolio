@@ -13,7 +13,8 @@ module.exports = function (sequelize, DataTypes) {
             },
         });
     Tool.associate = models => {
-        models.Tool.belongsToMany(models.Project, { through: 'ProjectTool' });
+        models.Tool.hasMany(models.ProjectTool, { onDelete: "cascade"});
+
     }
 
     return Tool
